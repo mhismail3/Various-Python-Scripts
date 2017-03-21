@@ -1,29 +1,7 @@
 import random
 
-def test1():
-    good = [[1,0,1,0,1,0,1,0],
-            [1,0,1,0,1,0,0,1],
-            [1,0,1,0,0,1,0,1],
-            [1,0,0,1,0,1,0,1],
-            [0,1,0,1,0,1,0,1]]
 
-    count = 0
-    cases = list()
-    
-    while count < 25600:
-        case = list()
-        for i in range(8):
-            case.append(random.randint(0, 1))
-
-        if case in good: cases.append(1)
-        else: cases.append(0)
-
-        count += 1
-
-    print(cases.count(1), len(cases))
-
-
-def test2():
+def flipCoins():
     cases = list()
     count = 0
 
@@ -47,5 +25,6 @@ def test2():
 
     print(cases.count(1), len(cases))
 
-#test1()
-test2()
+
+if __name__ == '__main__':
+    flipCoins()
